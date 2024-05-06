@@ -1,13 +1,15 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import { router as doctorRoutes } from "./routes/doctor.js"
-import { router as userRoutes } from "./routes/user.js"
+import { router as userRoutes } from "./routes/patient.js"
+import { router as medicineRoutes } from "./routes/patient.js"
 const app = express()
 
 app.use(express.json())
 
 app.use("/api/doctors/register", doctorRoutes)
 app.use("/api/users/register", userRoutes)
+app.use("/api/store", medicineRoutes)
 
 mongoose
     .connect("mongodb://localhost:27017/hospital")

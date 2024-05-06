@@ -1,5 +1,5 @@
 import express from 'express'
-import { User, validateUser as validate } from '../models/userSchema.js'
+import { User, validateUser as validate } from '../models/patientSchema.js'
 
 export const router = express.Router()
 
